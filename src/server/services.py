@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restx import Api
 
+import os
 
 class Servidor:
     def __init__(self):
@@ -14,8 +15,9 @@ class Servidor:
 
     def run(self):
         self.app.run(
-           
+            host='0.0.0.0',  # Aceitar conexões externas
+            port=int(os.environ.get("PORT", 5000)),  # Usar a porta do Render ou 5000
+            debug=True
         )
-
 
 servidor = Servidor()
