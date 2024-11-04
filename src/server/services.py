@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restx import Api
-import os
+
 
 class Servidor:
     def __init__(self):
@@ -12,7 +12,4 @@ class Servidor:
             description='Api que gerencia toda nosso site de to do list sem banco de dados'
         )
 
-servidor = Servidor()
-
-# A aplicação Flask agora pode ser acessada via `servidor.app`
-app = servidor.app
+servidor = Servidor()  # Esta linha cria a instância do servidor
