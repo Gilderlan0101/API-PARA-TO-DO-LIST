@@ -14,7 +14,7 @@ class Servidor:
 
     def run(self):
         self.app.run(
-            debug=True
+           
         )
 
 
